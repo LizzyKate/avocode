@@ -13,9 +13,6 @@
 }
 .rectangle{
     width: 45px;
-
-
-
     height: 100vh;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
     background-color: #ffffff
@@ -229,14 +226,14 @@ li img.four{
     font-size: 30px;
     font-weight: 600;
 }
-.graph{
+/* .graph{
     display: flex;
-}
+} */
 .fake-graph{
     background-color: white;
     padding:5px;  
     position: relative;
-    width:600px; 
+    /* width:600px;  */
 }
 .deal{
     display: flex;
@@ -298,21 +295,23 @@ p.special{
 }
 .main-graph{
         flex-grow:1;
-        margin-left: 20px;
+        /* margin-left: 20px; */
         background-color: white;
 }
 .main-graph img{
     width:100%;
     height: 230px;
 }
-.divisions{
-    display: flex;
+.divisions, .graph{
+    display: grid;
     margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 .first-division{
     display: flex;
     background-color: white;
-    width:490px;
+    /* width:490px; */
     height: 220px;
 }
 .first-split{
@@ -389,7 +388,7 @@ p.special{
 }
 .last{
     display:flex;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .rule{
     width: 200px;
@@ -401,6 +400,10 @@ p.special{
 .clock{
     background-color: #e5f3fe;
 }
+.rule > p {
+    font-size: 12px;
+    margin-top:10px;
+}
 .ten{
     width:16px;
     height: 16px;
@@ -409,20 +412,43 @@ p.special{
 }
 .fifth-container{
     flex-grow: 1;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     margin-left: 10px;
 }
 .sixth-container{
     display: flex;
-    
+    overflow-x: scroll;
+    /* max-width:812px; */
+    max-width: 830px;
 }
 .fresh{
-    width: 200px;
-   flex-grow: 1;
+    min-width: 200px;
     margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .begin{
     display: flex;
     justify-content: space-between;
     background-color: white;
+    padding:10px;
+    font-size: 10px;
+    font-family: Poppins;
+    align-items: center;
+}
+.nine {
+    display: flex;
+    align-items: center;
+}
+.nine p {
+    margin-left: 10px;
+}
+
+.middle {
+    min-height:125px;
+    background-color: #e5f3fe;
+}
+body{
+    width:100vw;
+    height: 100%;
+    overflow-x:hidden;
 }
